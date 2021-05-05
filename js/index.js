@@ -41,4 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 let nav1 = document.getElementsByTagName('a')
-nav1[0].innerHTML(siteContent['nav']['nav-item-1'])
+nav1[0].innerHTML = siteContent['nav']['nav-item-1']
+nav1[1].innerHTML = siteContent['nav']['nav-item-2']
+nav1[2].innerHTML = siteContent['nav']['nav-item-3']
+nav1[3].innerHTML = siteContent['nav']['nav-item-4']
+nav1[4].innerHTML = siteContent['nav']['nav-item-5']
+nav1[5].innerHTML = siteContent['nav']['nav-item-6']
+console.log(nav1)
