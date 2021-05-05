@@ -40,11 +40,58 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-let nav1 = document.getElementsByTagName('a')
-nav1[0].innerHTML = siteContent['nav']['nav-item-1']
-nav1[1].innerHTML = siteContent['nav']['nav-item-2']
-nav1[2].innerHTML = siteContent['nav']['nav-item-3']
-nav1[3].innerHTML = siteContent['nav']['nav-item-4']
-nav1[4].innerHTML = siteContent['nav']['nav-item-5']
-nav1[5].innerHTML = siteContent['nav']['nav-item-6']
-console.log(nav1)
+
+let navLinks = document.getElementsByTagName('a')
+//individually
+// nav1[0].innerHTML = siteContent['nav']['nav-item-1']
+// nav1[1].innerHTML = siteContent['nav']['nav-item-2']
+// nav1[2].innerHTML = siteContent['nav']['nav-item-3']
+// nav1[3].innerHTML = siteContent['nav']['nav-item-4']
+// nav1[4].innerHTML = siteContent['nav']['nav-item-5']
+// nav1[5].innerHTML = siteContent['nav']['nav-item-6']
+
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].innerHTML = siteContent['nav'][`nav-item-${i + 1}`]
+};
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].style.color = 'green'
+};
+
+let h1 = document.getElementsByTagName('h1');
+h1[0].innerHTML = siteContent['cta']['h1'];
+
+let button = document.getElementsByTagName('button');
+button[0].innerHTML = siteContent['cta']['button'];
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+let h4s = document.getElementsByTagName('h4');
+h4s[0].innerHTML = siteContent['main-content']['features-h4']
+h4s[1].innerHTML = siteContent['main-content']['about-h4']
+h4s[2].innerHTML = siteContent['main-content']['services-h4']
+h4s[3].innerHTML = siteContent['main-content']['product-h4']
+h4s[4].innerHTML = siteContent['main-content']['vision-h4']
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+let pars = document.getElementsByTagName('p')
+pars[0].innerHTML = siteContent['main-content']['features-content']
+pars[1].innerHTML = siteContent['main-content']['about-content']
+pars[2].innerHTML = siteContent['main-content']['services-content']
+pars[3].innerHTML = siteContent['main-content']['product-content']
+pars[4].innerHTML = siteContent['main-content']['vision-content']
+
+h4s[5].innerHTML = siteContent['contact']['contact-h4']
+pars[5].innerHTML = siteContent['contact']['address']
+pars[6].innerHTML = siteContent['contact']['phone']
+pars[7].innerHTML = siteContent['contact']['email']
+
+pars[8].innerHTML = siteContent['footer']['copyright']
+
+let tryThis = document.createElement("h2")
+let header = document.querySelector('header')
+tryThis.innerHTML = 'Try This';
+let h3 = document.createElement("h3")
+h3.innerHTML = 'NEW HEADER'
+header.appendChild(tryThis)
+header.prepend(h3)
